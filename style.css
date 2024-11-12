@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to left, rgba(0,0,0,0.1), rgba(0,0,0,0.2), rgba(0,0,0,0.3));
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    animation: fadeIn 3s;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.1), rgba(0,0,0,0.2), rgba(0,0,0,0.3));
+}
+
+/* Navigation Bar */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45%;
+    padding-top: 30px;
+    margin-right: 20%;
+    z-index: 1000;
+}
+nav img {
+    width: 100px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50%;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #727272;
+    transition: .4s ease;
+}
+nav ul a:hover {
+    color: #000;
+}
+
+/* Head Text */
+header h1 {
+    text-shadow: 0px 2px 3px #b3b3b3;
+    background-color: rgb(24, 46, 59);
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    position: absolute;
+    font-size: 250px;
+    left: 20%;
+    top: 28%;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Side Text */
+header p.explore {
+    color: rgb(51,51,51);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 70px;
+    left: 140px;
+}
+header p#name {
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    top: 52%;
+    font-size: large;
+    letter-spacing: 20px;
+}
+header p.left {
+    transform: rotate(-90deg);
+    left: -3%;
+}
+header p.right {
+    transform: rotate(90deg);
+    right: -6%;
+}
+
+/* Counter */
+header h2.one,
+header h2.one2 {
+    font-size: 130px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #818181;
+    position: absolute;
+    right: 110px;
+}
+
+h2.one2 {
+    right: 180px;
+}
+
+/* Shoes */
+header div.shoes {
+    position: relative;
+    left: 24%;
+    top: -10%;
+}
+header div.shoes img {
+    width: 50%;
+    animation: slide 2s;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+header div.shoes img.six {
+    width: 65%;
+    margin-top: 2%;
+    margin-left: -5%;
+}
+
+/* Left and right scroll */
+header div.scroll {
+    background-image: url(Images/arrow.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 2px rgba(49,49,49);
+    position: absolute;
+}
+header div.scroll:hover {
+    transform: scale(1.1);
+}
+header div.scroll:active {
+    transform: scale(1);
+}
+header div#left {
+    background-image: url(Images/arrow2.png);
+    top: 50%;
+    left: 15%;
+}
+header div#right {
+    top: 50%;
+    right: 15%;
+}
+
+header div.count h2 {
+    animation: num 4s;
+}
+
+@keyframes num {
+    from {
+        transform: translateX(25%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+span {
+    color: black;
+}
